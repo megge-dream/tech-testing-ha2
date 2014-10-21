@@ -1,6 +1,4 @@
 # coding=utf-8
-import os
-
 import unittest
 
 from tests.selenium_helpers.page_objects import *
@@ -20,10 +18,6 @@ class Test(unittest.TestCase):
         self.driver.quit()
 
     def test_log_in(self):
-        USERNAME = 'tech-testing-ha2-11@bk.ru'
-        PASSWORD = os.environ['TTHA2PASSWORD']
-        DOMAIN = '@bk.ru'
-
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
@@ -40,10 +34,6 @@ class Test(unittest.TestCase):
         self.assertEqual(USERNAME, email)
 
     def test_create_simple_adv(self):
-        USERNAME = 'tech-testing-ha2-11@bk.ru'
-        PASSWORD = os.environ['TTHA2PASSWORD']
-        DOMAIN = '@bk.ru'
-
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
@@ -86,10 +76,6 @@ class Test(unittest.TestCase):
         self.assertEqual(u'М и Ж', sex)
 
     def test_create_set_sex(self):
-        USERNAME = 'tech-testing-ha2-11@bk.ru'
-        PASSWORD = os.environ['TTHA2PASSWORD']
-        DOMAIN = '@bk.ru'
-
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
@@ -125,10 +111,6 @@ class Test(unittest.TestCase):
         self.assertEqual(u'Ж', sex)
 
     def test_create_set_interests(self):
-        USERNAME = 'tech-testing-ha2-11@bk.ru'
-        PASSWORD = os.environ['TTHA2PASSWORD']
-        DOMAIN = '@bk.ru'
-
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
@@ -174,10 +156,6 @@ class Test(unittest.TestCase):
         self.assertEqual(2, len(interests))
 
     def test_edit_sex(self):
-        USERNAME = 'tech-testing-ha2-11@bk.ru'
-        PASSWORD = os.environ['TTHA2PASSWORD']
-        DOMAIN = '@bk.ru'
-
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
@@ -219,10 +197,6 @@ class Test(unittest.TestCase):
         self.assertEqual(u'М и Ж', sex)
 
     def test_edit_interests(self):
-        USERNAME = 'tech-testing-ha2-11@bk.ru'
-        PASSWORD = os.environ['TTHA2PASSWORD']
-        DOMAIN = '@bk.ru'
-
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
